@@ -2,4 +2,4 @@ pandas
 streamlit
 os
 datetime
-plotly.graph_objects
+plotly
