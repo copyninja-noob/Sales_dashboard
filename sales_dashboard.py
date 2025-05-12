@@ -140,7 +140,7 @@ def build_card(dataframe, title, domain_filter=None):
             title="Cumulative Weekly Sales Trend",
             xaxis_title="Week Number",
             yaxis_title="Revenue",
-            xaxis=dict(tickmode='linear', tick0=1, dtick=1),
+            xaxis=dict(tickmode='linear', tick0=1, dtick=5),
             height=300,
             template="plotly_white",
             legend=dict(x=0, y=1.1, orientation='h'),
