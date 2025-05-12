@@ -132,13 +132,13 @@ def build_card(dataframe, title, domain_filter=None):
         merged[f'Cumulative_{rev2_col}'] = merged[rev2_col].cumsum()
 
         fig = go.Figure()
-        fig.add_trace(go.Scatter(x=merged['Week Label'], y=merged[f'Cumulative_{rev1_col}'], 
+        fig.add_trace(go.Scatter(x=merged['Week'], y=merged[f'Cumulative_{rev1_col}'], 
                                mode='lines', name=fy1, line=dict(color='blue')))
-        fig.add_trace(go.Scatter(x=merged['Week Label'], y=merged[f'Cumulative_{rev2_col}'], 
+        fig.add_trace(go.Scatter(x=merged['Week'], y=merged[f'Cumulative_{rev2_col}'], 
                                mode='lines', name=fy2, line=dict(color='orange')))
         fig.update_layout(
             title="Cumulative Weekly Sales Trend",
-            xaxis_title="Week",
+            xaxis_title="Week Number",
             yaxis_title="Revenue",
             height=300,
             template="plotly_white",
